@@ -6,13 +6,14 @@ namespace CodingChallenges
     {
         static void Main(string[] args)
         {
-            PalindromeNumber number = new PalindromeNumber();
-            Console.WriteLine(number.IsPalindrome(2));
-            Console.WriteLine(number.IsPalindrome(121));
-            Console.WriteLine(number.IsPalindrome(123));
-            Console.WriteLine(number.IsPalindrome(-121));
-            Console.WriteLine(number.IsPalindrome(-10));
-            Console.WriteLine(number.IsPalindrome(-101));
+            ValidParenthesesChallenge par = new ValidParenthesesChallenge();
+            Console.WriteLine("Expected TRUE, solution was: " + par.IsValid("()"));
+            Console.WriteLine("Expected TRUE, solution was: " + par.IsValid("()[]{}"));
+            Console.WriteLine("Expected FALSE, solution was: " + par.IsValid("(]"));
+            Console.WriteLine("Expected FALSE, solution was: " + par.IsValid("([)]"));
+            Console.WriteLine("Expected TRUE, solution was: " + par.IsValid("{[]}"));
+            Console.WriteLine("Expected FALSE, solution was: " + par.IsValid("){"));
+            Console.WriteLine("Expected FALSE, solution was: " + par.IsValid("]()"));
 
         }        
       
